@@ -5,12 +5,15 @@
 #SBATCH --job-name=vgg_trial
 #SBATCH --output=vgg_trial.out
 #SBATCH --error=vgg_trial.err
-#SBATCH --comment=
+#SBATCH --comment="VGG trial"
 #SBATCH --ntasks=1
-#SBATCH --time=1
+#SBATCH --partition=medium
+#SBATCH --time=179
 #SBATCH --mail-type=BEGIN,END,FAIL
 #SBATCH --mail-user=safes.boas0z@icloud.com
 #SBATCH --gpus=a100:1
+
+nvidia-smi
 
 cd /temp
 
