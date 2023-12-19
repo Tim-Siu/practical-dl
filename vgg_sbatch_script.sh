@@ -17,6 +17,8 @@ nvidia-smi
 
 cd /temp
 
+mkdir condap
+
 wget https://repo.anaconda.com/condap/Miniconda3-latest-Linux-x86_64.sh -O /temp/condap/miniconda.sh
 
 bash /temp/condap/miniconda.sh -b -u -p /temp/condap
