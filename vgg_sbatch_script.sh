@@ -6,12 +6,11 @@
 #SBATCH --output=vgg_trial.out
 #SBATCH --error=vgg_trial.err
 #SBATCH --comment="VGG trial"
-#SBATCH --ntasks=1
 #SBATCH --partition=medium
 #SBATCH --time=02:59:00
 #SBATCH --mail-type=BEGIN,END,FAIL
 #SBATCH --mail-user=safes.boas0z@icloud.com
-#SBATCH --gpus=a100:1
+#SBATCH --gpus=titanv:1
 
 nvidia-smi
 
@@ -19,7 +18,7 @@ cd /temp
 
 mkdir condap
 
-wget https://repo.anaconda.com/conda/Miniconda3-latest-Linux-x86_64.sh -O /temp/condap/miniconda.sh
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O /temp/condap/miniconda.sh
 
 bash /temp/condap/miniconda.sh -b -u -p /temp/condap
 
